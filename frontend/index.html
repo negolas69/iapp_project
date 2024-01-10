@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notiz-Verwaltungsanwendung</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Meine Notizen</h1>
+
+    <div>
+      <h2>Notiz hinzufügen</h2>
+      <form id="noteForm">
+        <input type="text" id="noteTitle" placeholder="Titel" required />
+        <textarea
+          id="noteDescription"
+          placeholder="Beschreibung"
+          required
+        ></textarea>
+        <select id="noteCategory">
+          <!-- Kategorieoptionen werden hier eingefügt -->
+        </select>
+        <button type="submit">Speichern</button>
+      </form>
+    </div>
+
+    <div>
+      <h2>Vorhandene Notizen</h2>
+      <ul id="notesList">
+        <!-- Notizen werden hier eingefügt -->
+      </ul>
+    </div>
+
+    <script src="./scripts/inputComponent.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/notes.js"></script>
+  </body>
+</html>

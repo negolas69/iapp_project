@@ -1,0 +1,31 @@
+# URL für Notizen API
+@notesUrl = http://localhost:3001/api/notes
+
+# Neue Notiz hinzufügen
+
+# @postNote
+POST {{notesUrl}}
+Content-Type: application/json
+
+{
+    "title": "Neue Notiz",
+    "description": "Dies ist der Inhalt der neuen Notiz."
+}
+
+###
+
+# Alle Notizen abfragen
+GET {{notesUrl}}
+
+###
+
+# 404 Error: Löschen einer Notiz mit einer nicht existierenden Id
+DELETE {{notesUrl}}/642ec9d225d32130a955d3a1
+
+###
+
+# Löschen einer existierenden Notiz
+
+@addedNoteId = {{postNote.response.body._id}}
+
+DELETE {{notesUrl}}/{{addedNoteId}}
